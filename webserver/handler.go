@@ -6,6 +6,9 @@ import (
 
 func handleAPIRequest(ctx *fasthttp.RequestCtx, path Route) {
 	if path == ROOT {
-		ctx.Error("hii your programme is working", 400)
+		ctx.SendFile("static/index.html")
+	}
+	if path == 2 {
+		ctx.SendFile("static" + string(ctx.Path()))
 	}
 }

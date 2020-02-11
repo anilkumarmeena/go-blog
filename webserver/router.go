@@ -24,7 +24,7 @@ func isPathValid(ctx *fasthttp.RequestCtx) (bool, Route) {
 	if utils.PathIs(root, ctx) {
 		return true, ROOT
 	}
-	return false, NONE
+	return true, 2
 }
 
 func HandleRequest(ctx *fasthttp.RequestCtx) {
